@@ -1,0 +1,19 @@
+{
+  "name": "nimbusfeed",
+  "version": "1.0.0",
+  "description": "An unofficial bot for notifying you and your Stoat server about NexusMods.com mod uploads and updates.",
+  "main": "src/bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "M4rkoz",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "mysql": "^2.18.1",
+    "node-cron": "^4.2.1",
+    "stoatbot.js": "^0.4.5"
+  }
+}
