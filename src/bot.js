@@ -26,13 +26,11 @@ const apiUrl="https://api.nexusmods.com/v1/games/"
 const embedColor="#fa8a43"
 const embedIcon="https://i.imgur.com/6uCNdws.png"
 const mention="<@01KH8XEZ8QZ8KT6GPFNBRXGMJG>"
-let feedChannel=null
 
 const helpMessage="## NimbusFeed Help\n**Usage:**\n"+mention+" enable `[channel]` `[gamenamestring]` - enables the feed for the specified game in the specified channel. Use the game name string you see in the Nexusmods mod page link (acecombat7skiesunknown, helldivers2, skyrimspecialedition, etc.) Note: You can only create one feed per channel.\n"+mention+" disable `[channel]` - disables the feed in the specified channel."
 
 
 bot.on("ready",()=>{
-    feedChannel=bot.channels.cache.get(process.env.CHANNEL_ID);
     console.log("Bot is ready!")
     cron.schedule('*/10 * * * *', () => {
         getGames()
@@ -315,7 +313,7 @@ async function loadIDs(){
     return ids
 }
 
-const requiredEnvVars=["BOT_TOKEN","API_KEY","CHANNEL_ID"]
+const requiredEnvVars=["BOT_TOKEN","API_KEY","DB_USERNAME","DB_PASSWORD","DB_NAME","DB_HOST","PORT"]
 const missingEnvVars=requiredEnvVars.filter((env)=>!process.env[env])
 
 if (missingEnvVars.length>0) {
