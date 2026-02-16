@@ -1,6 +1,8 @@
 # NimbusFeed
 An unofficial bot for notifying you and your Stoat server about NexusMods.com mod uploads and updates.
 
+Invite the bot here: https://stoat.chat/bot/01KH8XEZ8QZ8KT6GPFNBRXGMJG
+
 Uses the [stoatbot.js](https://jade3375.github.io/stoatbot.js/) library.
 
 ---
